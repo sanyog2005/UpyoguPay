@@ -53,8 +53,8 @@ const International = () => {
   };
 
   const payLaterOptions = [
-    { name: 'Flexipay', logoUrl: 'https://UpyoguPay.com/docs/build/browser/static/flexipay-72c0d3d4.svg', status: 'Request', alert: 'Flexipay has paused onboarding of new merchants. We will keep you updated on when the onboarding resumes.' },
-    { name: 'Simpl', logoUrl: 'https://UpyoguPay.com/docs/build/browser/static/simpl-8244e6d4.svg', status: 'Request', alert: 'Simpl has paused onboarding of new merchants. We will keep you updated on when the onboarding resumes.' }
+    { name: 'Flexipay', logoUrl: 'https://UpyugoPay.com/docs/build/browser/static/flexipay-72c0d3d4.svg', status: 'Request', alert: 'Flexipay has paused onboarding of new merchants. We will keep you updated on when the onboarding resumes.' },
+    { name: 'Simpl', logoUrl: 'https://UpyugoPay.com/docs/build/browser/static/simpl-8244e6d4.svg', status: 'Request', alert: 'Simpl has paused onboarding of new merchants. We will keep you updated on when the onboarding resumes.' }
   ];
 
   // New Data for Wallets

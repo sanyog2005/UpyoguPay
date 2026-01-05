@@ -231,7 +231,7 @@ const SystemSettings = () => {
                          <label className="text-sm font-medium text-slate-700">Netbanking Aggregator</label>
                          <select className="w-full p-2 border rounded-lg bg-white">
                             <option>BillDesk Aggregator</option>
-                            <option>UpyoguPay Route</option>
+                            <option>UpyugoPay Route</option>
                             <option>PayU Biz</option>
                          </select>
                       </div>

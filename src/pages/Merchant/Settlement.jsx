@@ -51,7 +51,7 @@ const Settlement = () => {
                  <div className="absolute right-[-20px] top-0 border-l-[20px] border-l-blue-600 border-b-[48px] border-b-transparent h-full"></div>
               </div>
               <div className="ml-8 text-sm text-slate-600">
-                UpyoguPay POS delivers reliability, speed, and scale for seamless in-store payments.
+                UpyugoPay POS delivers reliability, speed, and scale for seamless in-store payments.
               </div>
            </div>
            <div className="flex items-center gap-4">

@@ -143,11 +143,11 @@ const MerchantDashboard = () => {
                     <div className="absolute right-[-20px] top-0 border-l-[20px] border-l-blue-600 border-b-[48px] border-b-transparent h-full"></div>
                 </div>
                 <div className="ml-8 text-sm text-slate-600 truncate">
-                    UpyoguPay POS delivers reliability, speed, and scale for seamless in-store payments.
+                    UpyugoPay POS delivers reliability, speed, and scale for seamless in-store payments.
                 </div>
             </div>
             <div className="flex items-center gap-4 shrink-0">
-                <button onClick={() => window.open('https://UpyoguPay.com/pos', '_blank')} className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-4 py-1.5 rounded transition-colors">Talk to our experts today</button>
+                <button onClick={() => window.open('https://UpyugoPay.com/pos', '_blank')} className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-4 py-1.5 rounded transition-colors">Talk to our experts today</button>
                 <button onClick={() => closeBanner('pos')} className="text-slate-400 hover:text-slate-600"><X size={18} /></button>
             </div>
         </div>

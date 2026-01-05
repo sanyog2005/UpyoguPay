@@ -16,7 +16,7 @@ import {
 const PaymentPages = () => {
   // --- STATE ---
   const [activeTab, setActiveTab] = useState('Payment Pages');
-  const [pageType, setPageType] = useState('Payment Pages'); // Payment Pages, UpyoguPay Webstore
+  const [pageType, setPageType] = useState('Payment Pages'); // Payment Pages, UpyugoPay Webstore
   const [showGetStarted, setShowGetStarted] = useState(true);
   const [isCreateModalOpen, setCreateModalOpen] = useState(false);
 
@@ -50,7 +50,7 @@ const PaymentPages = () => {
       id: `pp_${Math.random().toString(36).substr(2, 9)}`,
       title: newPageData.title,
       description: newPageData.description || 'No description provided',
-      url: `https://pages.UpyoguPay.com/${newPageData.title.replace(/\s+/g, '-').toLowerCase()}`,
+      url: `https://pages.UpyugoPay.com/${newPageData.title.replace(/\s+/g, '-').toLowerCase()}`,
       created: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
       amount: newPageData.amount ? `₹ ${parseFloat(newPageData.amount).toFixed(2)}` : 'Flexible',
       status: 'Active',
@@ -179,20 +179,20 @@ const PaymentPages = () => {
                </button>
 
                <button 
-                  onClick={() => setPageType('UpyoguPay Webstore')}
+                  onClick={() => setPageType('UpyugoPay Webstore')}
                   className={`flex items-center gap-2 px-6 py-3 border rounded transition-all ${
-                     pageType === 'UpyoguPay Webstore' 
+                     pageType === 'UpyugoPay Webstore' 
                      ? 'bg-blue-50 border-blue-600 text-blue-700 shadow-sm relative' 
                      : 'bg-white border-gray-200 text-slate-600 hover:bg-gray-50'
                   }`}
                >
-                  {pageType === 'UpyoguPay Webstore' && (
+                  {pageType === 'UpyugoPay Webstore' && (
                      <div className="absolute bottom-[-9px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-blue-600"></div>
                   )}
-                  <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${pageType === 'UpyoguPay Webstore' ? 'border-blue-600' : 'border-slate-400'}`}>
-                     {pageType === 'UpyoguPay Webstore' && <div className="w-2 h-2 bg-blue-600 rounded-full"></div>}
+                  <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${pageType === 'UpyugoPay Webstore' ? 'border-blue-600' : 'border-slate-400'}`}>
+                     {pageType === 'UpyugoPay Webstore' && <div className="w-2 h-2 bg-blue-600 rounded-full"></div>}
                   </div>
-                  <span className="text-sm font-medium">UpyoguPay Webstore</span>
+                  <span className="text-sm font-medium">UpyugoPay Webstore</span>
                </button>
             </div>
 

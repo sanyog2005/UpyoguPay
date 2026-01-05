@@ -188,7 +188,7 @@ const Profile = () => {
 
       {/* Footer */}
       <div className="max-w-[1400px] mx-auto px-8 py-6 text-xs text-slate-400 border-t border-gray-200 mt-8">
-         © 2017-2026 Copyright UpyoguPay · <a href="#" className="hover:text-slate-600 underline">Terms of Use</a> · <a href="#" className="hover:text-slate-600 underline">Privacy Policy</a>
+         © 2017-2026 Copyright UpyugoPay · <a href="#" className="hover:text-slate-600 underline">Terms of Use</a> · <a href="#" className="hover:text-slate-600 underline">Privacy Policy</a>
       </div>
 
       {/* Floating Help Button */}

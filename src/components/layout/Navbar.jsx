@@ -51,10 +51,10 @@ const Navbar = () => {
     {
       title: 'VPA handle',
       items: [
-        { name: 'APL', status: 'operational', logo: 'https://cdn.UpyoguPay.com/static/assets/upi/apl.svg' },
-        { name: 'okicici', status: 'operational', logo: 'https://cdn.UpyoguPay.com/static/assets/upi/okicici.svg' },
-        { name: 'oksbi', status: 'operational', logo: 'https://cdn.UpyoguPay.com/static/assets/upi/oksbi.svg' },
-        { name: 'okaxis', status: 'operational', logo: 'https://cdn.UpyoguPay.com/static/assets/upi/okaxis.svg' },
+        { name: 'APL', status: 'operational', logo: 'https://cdn.UpyugoPay.com/static/assets/upi/apl.svg' },
+        { name: 'okicici', status: 'operational', logo: 'https://cdn.UpyugoPay.com/static/assets/upi/okicici.svg' },
+        { name: 'oksbi', status: 'operational', logo: 'https://cdn.UpyugoPay.com/static/assets/upi/oksbi.svg' },
+        { name: 'okaxis', status: 'operational', logo: 'https://cdn.UpyugoPay.com/static/assets/upi/okaxis.svg' },
         { name: 'YBL', status: 'operational' },
         { name: 'okhdfcbank', status: 'operational' }
       ]
@@ -165,7 +165,7 @@ const Navbar = () => {
                         <div className="border border-blue-100 rounded-sm p-0 overflow-hidden relative">
                            <div className="absolute top-[-1px] left-[-1px] bg-[#00A651] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-br-sm z-10">NEW</div>
                            <div className="flex items-center justify-between p-2 pt-3 bg-white hover:bg-slate-50 cursor-pointer transition-colors group">
-                              <div className="flex items-center gap-1 text-xs text-slate-600 truncate"><span className="opacity-60">UpyoguPay.me/</span><span className="font-bold text-slate-800">@raushan1075</span></div>
+                              <div className="flex items-center gap-1 text-xs text-slate-600 truncate"><span className="opacity-60">UpyugoPay.me/</span><span className="font-bold text-slate-800">@raushan1075</span></div>
                               <div className="flex items-center gap-2 text-slate-400"><Share2 size={14} className="hover:text-blue-600" /><ChevronDown size={14} className="-rotate-90 group-hover:text-blue-600" /></div>
                            </div>
                         </div>

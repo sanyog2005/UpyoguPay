@@ -16,7 +16,7 @@ const Sidebar = ({ role, onLogout }) => {
   }, [location.pathname]);
 
   // --- Configuration ---
-  const activeColor = "border-blue-500"; // UpyoguPay Blue accent
+  const activeColor = "border-blue-500"; // UpyugoPay Blue accent
   
   const adminLinks = [
     { to: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -77,7 +77,7 @@ const Sidebar = ({ role, onLogout }) => {
              <span className="relative text-white font-bold text-lg italic">/</span>
           </div>
           <h1 className="text-xl font-bold text-white tracking-tight italic font-sans">
-            UpyoguPay <span className="text-[10px] not-italic font-normal text-slate-400 bg-slate-800 px-1 py-0.5 rounded align-top ml-1">CLONE</span>
+            UpyugoPay <span className="text-[10px] not-italic font-normal text-slate-400 bg-slate-800 px-1 py-0.5 rounded align-top ml-1">CLONE</span>
           </h1>
         </div>
         

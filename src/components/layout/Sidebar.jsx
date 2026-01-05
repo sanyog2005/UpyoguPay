@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logoIcon from '../../assets/logo-icon.png';
 import { NavLink, useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, 
@@ -26,7 +27,7 @@ import {
   Gift,           // For Checkout Rewards
   MessageSquare,  // For Konnect
   ShoppingBag,    // For Affordability
-  AtSign,         // For UpyoguPay.me Link
+  AtSign,         // For UpyugoPay.me Link
   GitFork         // For Optimizer
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -92,7 +93,7 @@ const Sidebar = ({ role, onLogout }) => {
     { to: '/merchant/rewards', label: 'Checkout Rewards', icon: Gift },
     { to: '/merchant/konnect', label: 'Konnect', icon: MessageSquare },
     { to: '/merchant/affordability', label: 'Affordability', icon: ShoppingBag },
-    { to: '/merchant/UpyoguPay-link', label: 'UpyoguPay.me Link', icon: AtSign },
+    { to: '/merchant/UpyugoPay-link', label: 'UpyugoPay.me Link', icon: AtSign },
     { to: '/merchant/optimizer', label: 'Optimizer', icon: GitFork },
     
   ];
@@ -112,21 +113,30 @@ const Sidebar = ({ role, onLogout }) => {
     <div className="flex flex-col h-full bg-[#1e2434] text-[#8b92a5]">
       
       {/* 1. Logo Section */}
-      <div className="h-16 flex items-center px-6 mb-2 flex-shrink-0">
-        <div className="flex items-center gap-1">
-           <div className="relative w-5 h-5 flex items-center justify-center -mt-1">
-              <div className="absolute inset-0 bg-[#3395FF] transform -skew-x-12 rounded-[1px]"></div>
-              <span className="relative text-white font-bold text-sm italic">/</span>
-           </div>
-           <span className="text-xl font-bold text-white tracking-tight font-sans italic">UpyoguPay</span>
-        </div>
-        <button 
-          onClick={() => setIsMobileOpen(false)}
-          className="lg:hidden ml-auto text-slate-400 hover:text-white"
-        >
-          <X size={20} />
-        </button>
-      </div>
+      {/* 1. Logo Section */}
+<div className="h-16 flex items-center px-6 mb-2 flex-shrink-0">
+  <div className="flex items-center gap-3"> {/* Increased gap slightly for spacing */}
+
+     {/* REPLACED CSS SHAPE WITH IMG */}
+     <img 
+       src={logoIcon} 
+       alt="Logo" 
+       className="w-8 h-8 object-contain" 
+     />
+
+     {/* Kept the Text */}
+     <span className="text-xl font-bold text-white tracking-tight font-sans italic">
+       UpoguPay
+     </span>
+  </div>
+
+  <button 
+    onClick={() => setIsMobileOpen(false)}
+    className="lg:hidden ml-auto text-slate-400 hover:text-white"
+  >
+    <X size={20} />
+  </button>
+</div>
 
       {/* 2. Scrollable Navigation */}
       <nav className="flex-1 overflow-y-auto custom-scrollbar">
