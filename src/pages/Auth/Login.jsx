@@ -51,7 +51,7 @@ const Login = ({ onLogin }) => {
                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
                   <CreditCard className="text-white w-6 h-6" />
                </div>
-               <span className="text-2xl font-bold text-white tracking-tight">WEB LOXIC</span>
+               <span className="text-2xl font-bold text-white tracking-tight">UpyugoPay</span>
             </div>
             
             <h1 className="text-5xl font-bold text-white leading-tight mb-6">
@@ -85,7 +85,7 @@ const Login = ({ onLogin }) => {
                 <div className="flex justify-between items-end">
                   <div className="space-y-2">
                     <div className="text-white/40 text-xs uppercase tracking-widest">Card Holder</div>
-                    <div className="text-white font-medium tracking-wider">WEB LOXIC MERCHANT</div>
+                    <div className="text-white font-medium tracking-wider">UpyugoPay MERCHANT</div>
                   </div>
                   <div className="text-white/90 font-mono text-xl">12/28</div>
                 </div>
@@ -124,7 +124,7 @@ const Login = ({ onLogin }) => {
                   <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                       <CreditCard className="text-white w-5 h-5" />
                    </div>
-                   <span className="text-xl font-bold text-slate-900">WEB LOXIC</span>
+                   <span className="text-xl font-bold text-slate-900">UpyugoPay</span>
                 </div>
 
                 <h2 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h2>
@@ -235,7 +235,7 @@ const Login = ({ onLogin }) => {
         
         {/* Footer info for mobile/desktop */}
         <div className="absolute bottom-6 right-6 lg:left-6 lg:right-auto text-xs text-slate-400">
-          © 2024 Web Loxic. All rights reserved.
+          © 2024 UpyugoPay. All rights reserved.
         </div>
       </div>
     </div>

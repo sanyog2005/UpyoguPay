@@ -51,7 +51,7 @@ const SystemSettings = () => {
     smtp: {
       host: 'smtp.mailgun.org',
       port: '587',
-      user: 'postmaster@webloxic.com'
+      user: 'postmaster@UpyugoPay.com'
     },
     sms: {
       provider: 'Twilio',

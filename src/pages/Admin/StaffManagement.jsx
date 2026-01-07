@@ -26,7 +26,7 @@ const STAFF_MEMBERS = [
   { 
     id: 1, 
     name: "Sarah Jenkins", 
-    email: "sarah.j@webloxic.com", 
+    email: "sarah.j@UpyugoPay.com", 
     role: "Support", 
     status: "Active", 
     lastLogin: "2 mins ago",
@@ -35,7 +35,7 @@ const STAFF_MEMBERS = [
   { 
     id: 2, 
     name: "Michael Ross", 
-    email: "mike.r@webloxic.com", 
+    email: "mike.r@UpyugoPay.com", 
     role: "Finance", 
     status: "Active", 
     lastLogin: "1 hour ago",
@@ -44,7 +44,7 @@ const STAFF_MEMBERS = [
   { 
     id: 3, 
     name: "David Chen", 
-    email: "david.c@webloxic.com", 
+    email: "david.c@UpyugoPay.com", 
     role: "Technical", 
     status: "Inactive", 
     lastLogin: "3 days ago",

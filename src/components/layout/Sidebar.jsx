@@ -126,7 +126,7 @@ const Sidebar = ({ role, onLogout }) => {
 
      {/* Kept the Text */}
      <span className="text-xl font-bold text-white tracking-tight font-sans italic">
-       UpoguPay
+       UpyugoPay
      </span>
   </div>
 
