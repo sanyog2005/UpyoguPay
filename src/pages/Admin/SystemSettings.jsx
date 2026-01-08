@@ -319,7 +319,7 @@ const SystemSettings = () => {
                             <th className="px-4 py-3">Timestamp</th>
                             <th className="px-4 py-3">Level</th>
                             <th className="px-4 py-3">Module</th>
-                            <th className="px-4 py-3">Message</th>
+                            <th className="px-4 py-3">Messagee</th>
                          </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100 text-sm font-mono">
