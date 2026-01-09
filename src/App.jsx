@@ -2,6 +2,20 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Login from './pages/Auth/Login';
+import PaymentLand from './pages/landingPages/PaymentLand';
+import BankingLand from './pages/landingPages/BankingLand';
+import ResourcesLand from './pages/landingPages/ResourcesLand';
+
+
+// Generic Page Component for Top-Level Routes</>
+const GenericPage = () => {
+    return (
+        <div className="p-4">
+            <h1>Generic Page</h1>
+            <p>This is a placeholder for top-level navigation items.</p>
+        </div>
+    );
+};
 
 // Admin Pages
 import AdminDashboard from './pages/Admin/AdminDashboard';
@@ -29,12 +43,14 @@ import Subscriptions from './pages/Merchant/Subscriptions';
 import PaymentPages from './pages/Merchant/PaymentPages';
 import PaymentButton from './pages/Merchant/PaymentButton';
 import Invoices from './pages/Merchant/Invoices';
+import LandingPage from './pages/Auth/LandingPage';
 
 // Staff Pages
 import StaffDashboard from './pages/Staff/StaffDashBoard';
 import StaffSupport from './pages/Staff/StaffSupport';
 import StaffReports from './pages/Staff/StaffReports';
 import StaffOperations from './pages/Staff/StaffOperations';
+import SignUp from './pages/Auth/SignUp';
 
 const NotFound = () => {
     return (
@@ -62,10 +78,25 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 {/* Public Route */}
+                <Route path="/" element={<LandingPage />} />
                 <Route 
                     path="/login" 
                     element={!userRole ? <Login onLogin={handleLogin} /> : <Navigate to={`/${userRole}/dashboard`} />} 
                 />
+                 <Route path="/signup" element={<SignUp />} />
+
+                 {/* --- New Routes for Navbar Items --- */}
+      
+      {/* Top Level Routes */}
+      <Route path="/payment" element={<PaymentLand />} />
+      <Route path="/banking" element={<BankingLand />} />
+      <Route path="/payroll" element={<GenericPage />} />
+      <Route path="/engage" element={<GenericPage />} />
+      <Route path="/partners" element={<GenericPage />} />
+      <Route path="/resources" element={<ResourcesLand />} />
+      <Route path="/pricing" element={<GenericPage />} />
+
+
 
                 {/* Protected Routes Wrapper */}
                 {/* If logged in, render Layout. If not, Redirect to Login. */}
