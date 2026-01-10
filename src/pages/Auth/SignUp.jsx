@@ -19,7 +19,7 @@ const SignUp = () => {
     setTimeout(() => {
       setIsLoading(false);
       
-      // 1. Set Auth Token & Role
+      // 1. Set Auth Token & Role (Defaulting to Merchant for Sign Up)
       localStorage.setItem('userToken', 'mock-merchant-token-123'); 
       localStorage.setItem('userRole', 'merchant');
 
@@ -34,7 +34,7 @@ const SignUp = () => {
       {/* --- Back to Home Button --- */}
       <Link 
         to="/" 
-        className="absolute top-2 left-8 z-50 flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 transition-all hover:bg-black/30"
+        className="absolute top-6 right-6 z-50 flex items-center gap-2 text-sm font-bold text-white/80 hover:text-white bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 transition-all hover:bg-black/30"
       >
         <Home size={16} />
         <span>Back to Home</span>
@@ -54,12 +54,12 @@ const SignUp = () => {
         {/* Content Overlay */}
         <div className="relative z-10 w-full h-full flex flex-col justify-center p-16 pl-24">
            {/* Logo */}
-           <div className="absolute top-15 left-12 flex items-center gap-2 text-white font-bold text-2xl tracking-tight">
+           <div className="absolute top-12 left-12 flex items-center gap-2 text-white font-bold text-2xl tracking-tight">
               <img 
-                                 src={logoIcon} 
-                                 alt="Logo" 
-                                 className="w-8 h-8 object-contain" 
-                               />
+                 src={logoIcon} 
+                 alt="Logo" 
+                 className="w-8 h-8 object-contain" 
+              />
               <span className="ml-4">UpyugoPay</span>
            </div>
 
@@ -88,7 +88,7 @@ const SignUp = () => {
       {/* RIGHT SIDE - Sign Up Card */}
       <div className="w-full lg:w-[45%] flex items-center justify-center p-8 bg-[#F9FAFB] relative">
          
-         <div className="bg-white w-full max-w-[480px] p-10 md:p-12 rounded-xl shadow-2xl border border-gray-100 relative z-10">
+         <div className="bg-white w-full max-w-[480px] p-10 md:p-12 rounded-xl shadow-2xl border border-gray-100 relative z-10 animate-in slide-in-from-right-8 duration-500">
             
             {/* Header */}
             <div className="mb-8">
@@ -117,7 +117,7 @@ const SignUp = () => {
                   />
                </div>
 
-               {/* Company Registered Dropdown (New Field) */}
+               {/* Company Registered Dropdown */}
                <div>
                   <label className="block text-xs font-semibold text-slate-500 mb-1.5 ml-1">Where is your company registered?</label>
                   <div className="relative">

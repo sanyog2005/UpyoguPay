@@ -31,7 +31,7 @@ const Login = ({ onLogin }) => {
     }, 1000);
   };
 
-  // Step 2: Verify OTP
+  // Step 2: Verify OTP -> Move to Password Creation
   const handleVerifyOtp = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -42,7 +42,7 @@ const Login = ({ onLogin }) => {
     }, 1000);
   };
 
-  // Step 3: Create Password & Redirect to Verification
+  // Step 3: Create Password & Complete Login
   const handleCreatePassword = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -50,12 +50,15 @@ const Login = ({ onLogin }) => {
     setTimeout(() => {
       setIsLoading(false);
       
-      // 1. Set Partial Auth State (User is created but not verified)
-      localStorage.setItem('userToken', 'mock-pre-verify-token'); 
+      // Set Auth Token & Role
+      localStorage.setItem('userToken', 'mock-merchant-token-123'); 
       localStorage.setItem('userRole', 'merchant');
 
-      // 2. Navigate to the Verify Screen
-      navigate('/verify');
+      if (onLogin) {
+        onLogin('merchant', { email });
+      }
+
+      navigate('/merchant/dashboard');
     }, 1500);
   };
 
@@ -74,7 +77,7 @@ const Login = ({ onLogin }) => {
     }
   };
 
-  // Password Validation Logic
+  // Password Validation Logic (Visual Only)
   const passwordValidations = [
     { label: 'Must include 8 characters', valid: password.length >= 8 },
     { label: 'Must include at least 1 alphabet', valid: /[a-zA-Z]/.test(password) },
@@ -126,7 +129,7 @@ const Login = ({ onLogin }) => {
 
       {/* Right Content - Interactive Card */}
       <div className="w-full lg:w-[45%] flex items-center justify-center p-8 relative z-10 h-full">
-         <div className="bg-white w-full max-w-[480px] p-10 md:p-12 rounded-xl shadow-2xl relative min-h-[550px] flex flex-col justify-center animate-in slide-in-from-right-8 duration-500">
+         <div className="bg-white w-full max-w-[480px] p-10 md:p-12 rounded-xl shadow-2xl relative min-h-[550px] flex flex-col justify-center">
             
             <div className="mb-8">
                <img src={logoIcon} alt="Logo" className="w-12 h-12 object-contain mb-6" />
@@ -160,11 +163,11 @@ const Login = ({ onLogin }) => {
               <form className="space-y-5" onSubmit={handleEmailSubmit}>
                  <input 
                     type="text" 
-                    placeholder="Enter your email or phone number" 
-                    className="w-full px-4 py-3.5 border border-gray-300 rounded-[4px] text-sm focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all bg-gray-50 focus:bg-white outline-none" 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
-                    required 
+                    placeholder="Enter your email or phone number"
+                    className="w-full px-4 py-3.5 border border-gray-300 rounded-[4px] text-sm focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all bg-gray-50 focus:bg-white outline-none"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                  />
                  <button disabled={isLoading} className="w-full bg-[#2B83EA] hover:bg-blue-700 text-white font-bold py-3.5 rounded-[4px] text-sm transition-all shadow-md flex items-center justify-center gap-2">
                     {isLoading ? <Loader2 size={18} className="animate-spin" /> : 'Continue'}
@@ -193,15 +196,23 @@ const Login = ({ onLogin }) => {
               </form>
             )}
 
-            {/* STEP 3: PASSWORD */}
+            {/* STEP 3: PASSWORD (NEW) */}
             {step === 'password' && (
               <form className="space-y-6" onSubmit={handleCreatePassword}>
                  <div className="relative">
-                    <input type={showPassword ? "text" : "password"} placeholder="Enter password" className="w-full px-4 py-3.5 border border-gray-300 rounded-[4px] text-sm focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all outline-none pr-10" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <input 
+                       type={showPassword ? "text" : "password"}
+                       placeholder="Enter password"
+                       className="w-full px-4 py-3.5 border border-gray-300 rounded-[4px] text-sm focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all outline-none pr-10"
+                       value={password}
+                       onChange={(e) => setPassword(e.target.value)}
+                       required
+                    />
                     <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                        {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                     </button>
                  </div>
+
                  <div className="space-y-2">
                     {passwordValidations.map((item, idx) => (
                        <div key={idx} className="flex items-center gap-2 text-xs text-slate-500">
@@ -210,9 +221,11 @@ const Login = ({ onLogin }) => {
                        </div>
                     ))}
                  </div>
+
                  <button disabled={isLoading} className="w-full bg-[#EBF4FF] hover:bg-blue-100 text-blue-600 font-bold py-3.5 rounded-[4px] text-sm transition-all flex items-center justify-center gap-2 mt-4">
                     {isLoading ? <Loader2 size={18} className="animate-spin" /> : 'Create Password'}
                  </button>
+
                  <div className="text-center mt-6"><p className="text-xs text-slate-500">Want to change your signup mode? <button type="button" onClick={() => setStep('email')} className="text-blue-600 font-bold hover:underline">Use another method</button></p></div>
               </form>
             )}

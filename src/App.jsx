@@ -5,6 +5,9 @@ import Login from './pages/Auth/Login';
 import PaymentLand from './pages/landingPages/PaymentLand';
 import BankingLand from './pages/landingPages/BankingLand';
 import ResourcesLand from './pages/landingPages/ResourcesLand';
+import Verify from './pages/Auth/Verify';
+import OnBoarding from './pages/Auth/OnBoarding';
+import VideoCall from './pages/Auth/VideoCall';
 
 
 // Generic Page Component for Top-Level Routes</>
@@ -84,6 +87,9 @@ const App = () => {
                     element={!userRole ? <Login onLogin={handleLogin} /> : <Navigate to={`/${userRole}/dashboard`} />} 
                 />
                  <Route path="/signup" element={<SignUp />} />
+                 <Route path="/verify" element={<Verify />} />
+                 <Route path="/onboarding" element={<OnBoarding />} /> {/* Add this line */}
+                <Route path="/video-call" element={<VideoCall onLogin={handleLogin} />} />
 
                  {/* --- New Routes for Navbar Items --- */}
       
